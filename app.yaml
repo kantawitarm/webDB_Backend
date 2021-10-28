@@ -1,0 +1,8 @@
+# [START app]
+runtime: nodejs
+env: flex
+
+# env_variables:
+#   MYSQL_DNS: mysql:unix_socket=/cloudsql/tough-entry-330119:us-central1:db-sql;dbname=DATABASE
+#   MYSQL_USER: main
+#   MYSQL_PASSWORD: 'password1234'
