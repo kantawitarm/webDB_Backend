@@ -50,7 +50,7 @@ app.use(express.static('build'));
 app.get("/table_back", async(req, res)=>{
     var sql_request = new sql.Request()
     console.log("table")
-    data = await sql_request.query('select top 10 site_type as type, published, country, title, uuid from information')
+    data = await sql_request.query('select site_type as type, published, country, title, uuid from information')
     // console.log(data)
     res.send(data.recordsets)
 })
