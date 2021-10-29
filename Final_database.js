@@ -47,7 +47,7 @@ app.use(express.static('build'));
 //     res.send(data.recordsets)
 // })
 
-app.get("/table", async(req, res)=>{
+app.get("/table_back", async(req, res)=>{
     var sql_request = new sql.Request()
     console.log("table")
     data = await sql_request.query('select site_type as type, published, country, title, uuid from information')
@@ -67,14 +67,14 @@ app.get("/table", async(req, res)=>{
 //     res.send(data.recordsets)
 // })
 
-app.get("/graph", async(req, res)=>{
+app.get("/graph_back", async(req, res)=>{
     var sql_request = new sql.Request()
     console.log("graph")
     data = await sql_request.query('select * from datePerUnit')
     res.send(data.recordsets)
 })
 
-app.get("/Unit/:id", async(req, res)=>{
+app.get("/unit_back/:id", async(req, res)=>{
     var sql_request = new sql.Request()
     // console.log(req)
     console.log("unit: " + req.params.id)
@@ -83,7 +83,7 @@ app.get("/Unit/:id", async(req, res)=>{
     res.send(data.recordsets)
 })
 
-app.get("/piechart", async(req, res)=>{
+app.get("/piechart_back", async(req, res)=>{
     var sql_request = new sql.Request()
     // console.log(req)
     console.log("piechart")
