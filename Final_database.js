@@ -90,7 +90,8 @@ app.get("/piechart", async(req, res)=>{
     res.send(data.recordsets)
 })
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 80;
+
 
 server.listen(PORT,(req,res)=>{
     console.log("ok")
