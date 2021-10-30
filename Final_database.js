@@ -87,7 +87,7 @@ app.get("/api/piechart_back", async(req, res)=>{
     var sql_request = new sql.Request()
     // console.log(req)
     console.log("piechart")
-    data = await sql_request.query(`select count(*) from information group by site_type`)
+    data = await sql_request.query(`select site_type as type, COUNT(*) as count from information group by site_type`)
     console.log(data.recordsets)
     res.send(data.recordsets)
 })
