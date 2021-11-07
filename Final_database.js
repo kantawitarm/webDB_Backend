@@ -93,7 +93,7 @@ app.get("/api/piechart_back", async(req, res)=>{
     res.send(data.recordsets)
 })
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 
 server.listen(PORT,(req,res)=>{
