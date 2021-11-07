@@ -9,7 +9,7 @@ env: flex
 
 env_variables:
   NPM_CONFIG_PRODUCTION:  false
-   NPM_CONFIG_LOGLEVEL:  error
-   NODE_VERBOSE: false
-   NODE_ENV: development
-   NODE_MODULES_CACHE: true
+  NPM_CONFIG_LOGLEVEL:  error
+  NODE_VERBOSE: false
+  NODE_ENV: development
+  NODE_MODULES_CACHE: true
