@@ -7,9 +7,9 @@ const sql = require('mssql')
 
 const config = {
     user :"sqlserver",
-    password:"password1234",
-    server:"35.223.146.167",
-    database: "webDB",
+    password:"pass123456",
+    server:"34.69.111.215",
+    database: "dbo",
     options: {
         "encrypt": false,
         trustedconnection: true,
@@ -18,13 +18,13 @@ const config = {
     }
 }
 
-// sql.connect(config,(err) =>{
-//     if (err){
-//         console.log(err)
-//     }else{
-//         console.log("mysql connected")
-//     } 
-// })
+sql.connect(config,(err) =>{
+    if (err){
+        console.log(err)
+    }else{
+        console.log("mysql connected")
+    } 
+})
 
 app.use(cor())
 app.use(function(req,res,next){
@@ -38,7 +38,7 @@ app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: false}));
 
 
-app.use(express.static('build'));
+// app.use(express.static('build'));
 
 // app.get("/", async (req,res)=>{
 //     var sql_request = new sql.Request()
@@ -93,7 +93,7 @@ app.get("/api/piechart_back", async(req, res)=>{
     res.send(data.recordsets)
 })
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 
 server.listen(PORT,(req,res)=>{
