@@ -18,13 +18,13 @@ const config = {
     }
 }
 
-sql.connect(config,(err) =>{
-    if (err){
-        console.log(err)
-    }else{
-        console.log("mysql connected")
-    } 
-})
+// sql.connect(config,(err) =>{
+//     if (err){
+//         console.log(err)
+//     }else{
+//         console.log("mysql connected")
+//     } 
+// })
 
 app.use(cor())
 app.use(function(req,res,next){
