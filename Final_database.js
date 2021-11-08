@@ -38,7 +38,7 @@ app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: false}));
 
 
-app.use(express.static('build'));
+// app.use(express.static('build'));
 
 // app.get("/", async (req,res)=>{
 //     var sql_request = new sql.Request()
